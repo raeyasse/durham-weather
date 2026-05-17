@@ -1,6 +1,6 @@
 const tempButton = document.getElementById("tempButton")
 const conditionButton = document.getElementById("conditionButton")
-
+const weatherDisplay = document.getElementById("weatherDisplay")
 
 function getTemperature() {
     fetch('https://api.open-meteo.com/v1/forecast?latitude=35.994&longitude=-78.8986&timezone=America%2FNew_York&forecast_days=1&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&current=temperature_2m')
@@ -9,7 +9,7 @@ function getTemperature() {
             console.log(data)
 
             const temperature = data.current.temperature_2m
-            weatherDisplay.textContent = `The current Temperature is: ${temperature}`
+            weatherDisplay.textContent = `The current Temperature is: ${temperature} °F`
         })
         .catch(error => console.error(error))
 }
