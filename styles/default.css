@@ -79,3 +79,17 @@ button:hover {
 body {
     overflow: hidden;
 }
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+        white-space: nowrap;
+    }
+
+    .card {
+        padding: 40px 24px;
+        margin: 0 16px;
+        min-width: unset;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
