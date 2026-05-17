@@ -1,3 +1,78 @@
-main{
-    background-image: "images/durham.png";
+@font-face {
+    font-family: 'OCRB';
+    src: url('../fonts/OCRB-Regular.ttf') format('truetype');
+}
+
+
+body {
+    background-image: url("../images/durham.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 35px;
+    padding: 40px 50px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    min-width: 320px;
+}
+
+h1 {
+    font-family: 'OCRB', monospace;
+    font-size: 3rem;
+    color: #0D3B66;
+    margin: 0 0 24px 0;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+button {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    letter-spacing: 1px;
+}
+
+#tempButton {
+    background: #FAF0CA;
+    color: #1a1a2e;
+}
+
+#conditionButton {
+    background: transparent;
+    color: #9E0059;
+    border: 2px solid rgba(255,255,255,0.7);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+#weatherDisplay {
+    margin-top: 24px;
+    font-family: 'DM Sans', sans-serif;
+    color: black;
+    font-size: 1.1rem;
 }
