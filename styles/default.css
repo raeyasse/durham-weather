@@ -1,3 +1,4 @@
+/* using fonts from computer*/
 @font-face {
     font-family: 'OCRB';
     src: url('../fonts/OCRB-Regular.ttf') format('truetype');
@@ -79,6 +80,8 @@ button:hover {
 body {
     overflow: hidden;
 }
+
+/*styling for smaller screens*/
 @media (max-width: 480px) {
     h1 {
         font-size: 2rem;
