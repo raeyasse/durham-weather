@@ -65,7 +65,7 @@ button {
     color:#FFFFFF;
 }
 
-button:hover {
+button:hover:not(:disabled) {
     filter: brightness(1.2);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(216, 17, 89, 0.4);
@@ -95,4 +95,32 @@ body {
         width: 100%;
         box-sizing: border-box;
     }
+}
+
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#weatherDisplay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    flex-shrink: 0;
 }
